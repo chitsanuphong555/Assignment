@@ -23,8 +23,8 @@ const Navbar = () => {
     <div
       className={
         theme === "dark"
-          ? "h-16 bg-orange-400 flex justify-around items-center absolute w-full"
-          : "h-16 bg-gray-300 flex justify-around items-center absolute w-full"
+          ? "h-16 bg-orange-400 flex justify-around items-center px-56 absolute w-full"
+          : "h-16 bg-gray-300 flex justify-around items-center px-56 absolute w-full"
       }
     >
       <div className="logo">
@@ -32,7 +32,23 @@ const Navbar = () => {
           <img src={Logo} alt="Logo" className="h-full w-28" />
         </Link>
       </div>
-      <ul>
+      <ul className="flex flex-row justify-around w-full">
+        <li>
+          <Link
+            to="/quiz"
+            className={theme === "dark" ? "text-white" : "text-black"}
+          >
+            Quiz
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/dashboard"
+            className={theme === "dark" ? "text-white" : "text-black"}
+          >
+            Portfolio
+          </Link>
+        </li>
         <li>
           <Link
             to="/dashboard"

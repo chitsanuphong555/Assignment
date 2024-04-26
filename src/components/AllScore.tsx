@@ -1,7 +1,6 @@
-import React from "react";
 
 const AllScore = () => {
-  return <div className="text-xl text-white">AllScore</div>;
+  return <div className="text-xl text-white">asd</div>;
 };
 
 export default AllScore;

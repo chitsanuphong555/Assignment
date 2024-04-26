@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Homepage from "./components/Homepage";
 import AllScore from "./components/AllScore";
 import Navbar from "./components/Navbar";
+import MainQuiz from "./components/quiz/MainQuiz";
 import "./App.css";
 
 interface ThemeContextType {
@@ -23,6 +24,7 @@ function App() {
           <Routes>
             <Route path="/">
               <Route index element={<Homepage />} />
+              <Route path="quiz" element={<MainQuiz />} />
               <Route path="dashboard" element={<AllScore />} />
               {/* <Route path="about" element={<About />} />
           <Route path="dashboard" element={<Dashboard />} />
