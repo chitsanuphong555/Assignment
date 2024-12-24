@@ -9,9 +9,10 @@ const Menu = () => {
   }
 
   const { setAppState } = dataContext;
+  
   return (
-    <div className="flex flex-col justify-center items-center">
-      <h1>แบบทดสอบก่อนเรียน</h1>
+    <div className="flex flex-col justify-start items-center h-3/4">
+      <h1 className="mb-5">แบบทดสอบก่อนเรียน</h1>
       <button onClick={() => setAppState("quiz")}>เริ่มทำแบบทดสอบ</button>
     </div>
   );

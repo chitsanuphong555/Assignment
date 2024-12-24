@@ -13,8 +13,7 @@ const Navbar = () => {
 
   const { theme, setTheme } = themeContext;
 
-  const toggleSwitch = (checked: boolean) => {
-    console.log(`switch to ${checked}`);
+  const toggleSwitch = () => {
     if (setTheme) {
       setTheme(theme === "light" ? "dark" : "light");
     }
@@ -23,8 +22,8 @@ const Navbar = () => {
     <div
       className={
         theme === "dark"
-          ? "h-16 bg-orange-400 flex justify-around items-center px-56 absolute w-full"
-          : "h-16 bg-gray-300 flex justify-around items-center px-56 absolute w-full"
+          ? "h-16 bg-orange-400 flex justify-around items-center px-12 lg:px-56 absolute w-full"
+          : "h-16 bg-gray-300 flex justify-around items-center px-12 lg:px-56 absolute w-full"
       }
     >
       <div className="logo">
@@ -54,7 +53,7 @@ const Navbar = () => {
             to="/dashboard"
             className={theme === "dark" ? "text-white" : "text-black"}
           >
-            Dashboard Sroce
+            Dashboard Score
           </Link>
         </li>
       </ul>
@@ -69,6 +68,9 @@ const Navbar = () => {
               : "!bg-white !outline-orange-400 !outline !outline-2"
           }
         />
+        <span className={theme === "dark" ? "text-white" : "text-black"}>
+          {theme === "dark" ? "light" : "dark"}
+        </span>
       </div>
     </div>
   );

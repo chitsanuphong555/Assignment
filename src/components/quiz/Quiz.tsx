@@ -37,10 +37,11 @@ const Quiz = () => {
       setCurrent(current + 1);
     }
   };
+
   return (
     <div className="flex flex-col items-center">
       <h1>{QuestionsData[current].question}</h1>
-      <div className="flex flex-col">
+      <div className="flex flex-col mb-3">
         <button onClick={() => setSelectChoice("A")}>
           {QuestionsData[current].A}
         </button>
